@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Gerador de Figurinhas</title>
 </head>
+
 <body>
-    <h1>Gerador de Figurinhas</h1>
     <form action="/gerar-figurinha" method="post">
-        <label for="url">URL da Imagem:</label>
-        <input type="text" id="url" name="url" required/><br><br>
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required/><br><br>
-        <label for="nomeArquivo">Nome do Arquivo:</label>
-        <input type="text" id="nomeArquivo" name="nomeArquivo" required/><br><br>
-        <input type="submit" value="Gerar Figurinha"/>
+        <div class="caixa">
+            <h1>Gerador de Figurinhas</h1>            
+            <label for="url">URL da Imagem:</label><br>
+            <input type="text" id="url" name="url" required /><br><br>
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo" required /><br><br>
+            <label for="nomeArquivo">Nome do Arquivo:</label><br>
+            <input type="text" id="nomeArquivo" name="nomeArquivo" required /><br><br>
+            <input type="submit" value="Gerar Figurinha" />
+        </div>
     </form>
 </body>
+
 </html>
+<style>
+    body {
+        background-color: brown;
+    }
+    .caixa{
+        position: absolute;
+        width: 300px;
+        height: 350px;
+        left: 40%;
+        right: 50%;
+        border: 5px solid black;
+        border-radius: 9%;
+    }
+    input{
+        margin-left: 10px;
+    }
+    label{
+        font-size: large;
+        color: white;
+        text-align: center;
+    }
+</style>
