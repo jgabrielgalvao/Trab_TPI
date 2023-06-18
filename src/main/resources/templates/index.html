@@ -9,13 +9,13 @@
     <form action="/gerar-figurinha" method="post">
         <div class="caixa">
             <h1>Gerador de Figurinhas</h1>            
-            <label for="url">URL da Imagem:</label><br>
+            <label id="lbl_url" for="url">URL da Imagem:</label><br>
             <input type="text" id="url" name="url" required /><br><br>
-            <label for="titulo">Título:</label><br>
+            <label id="lbl_titulo" for="titulo">Título:</label><br>
             <input type="text" id="titulo" name="titulo" required /><br><br>
-            <label for="nomeArquivo">Nome do Arquivo:</label><br>
+            <label id="lbl_nomearquivo" for="nomeArquivo">Nome do Arquivo:</label><br>
             <input type="text" id="nomeArquivo" name="nomeArquivo" required /><br><br>
-            <input type="submit" value="Gerar Figurinha" />
+            <input id="botao" type="submit" value="Gerar Figurinha" />
         </div>
     </form>
 </body>
@@ -26,6 +26,7 @@
         background-color: brown;
     }
     .caixa{
+        background-color: cadetblue;
         position: absolute;
         width: 300px;
         height: 350px;
@@ -37,9 +38,20 @@
     input{
         margin-left: 10px;
     }
-    label{
-        font-size: large;
+    h1{
+        font-size: 25px;
         color: white;
-        text-align: center;
+        text-align: center !important;
+    }
+    .caixa > label{
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    #botao{
+        width: 100px;
+        font-size: 12px;
+        height: 30px;
+        border-radius: 6%;
     }
 </style>
